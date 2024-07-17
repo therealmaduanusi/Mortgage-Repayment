@@ -190,25 +190,47 @@ label[for='Interest-only'] {
     font-weight: 700;
     cursor: pointer;
 }
+label[for='Mortgage-payment'] > span,
+label[for='Interest-only'] > span {
+    margin-left: 5px;
+}
+
 label[for='Mortgage-payment']:hover,
 label[for='Interest-only']:hover {
     border: 1px solid var(--btn-color);
 }
-/* label[for='Mortgage-payment'] input,
-label[for='Interest-only'] input {
-    display: none;
+
+.active-radio {
+    background-color: hsla(61, 70%, 52%, 0.271);
+    position: relative;
 }
-label[for='Mortgage-payment'] input + label::before,
-label[for='Interest-only'] input + label::before {
-    content: 'h';
-} */
-label[for='Mortgage-payment'] input:checked ,
-label[for='Interest-only'] input:checked {
-    /* border: 1px solid var(--btn-color); */
-    background-color: var(--btn-color);
-    /* height: 100px; */
-    box-shadow: 1em 1rem 0.1em var(--btn-color);
+
+input[type='radio']::after {
+    content: '';
+    background-color: #fff;
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    bottom: 1px;
+    left: 0.2px;
+    border: 1px solid hsl(61, 70%, 52%);
+    position: relative;
 }
+input[type='radio']::before {
+    content: '';
+    background-color: hsl(61, 70%, 52%);
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    top: 9.5px;
+    left: 7.4px;
+}
+
+
 
 
 form > button {

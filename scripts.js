@@ -1,5 +1,8 @@
 let mortgageActiveState = document.querySelectorAll('.mortage');
+// const radioButtons = document.querySelectorAll('form input[type="radio"]');
+const radioButtons = document.querySelectorAll('form .label-radio');
 
+// console.log(radioButtons);
 mortgageActiveState.forEach(mortgageActive => {
     mortgageActive.addEventListener('click', () => {
         let current = document.getElementsByClassName("active");
@@ -13,3 +16,11 @@ mortgageActiveState.forEach(mortgageActive => {
     })
 })
 
+radioButtons.forEach(radio => {
+    radio.addEventListener('change', () => {
+        let declaration = document.styleSheets[0].cssRules[0].style;
+        console.log(declaration);
+        radioButtons.forEach(rb => rb.classList.remove('active-radio'));
+        radio.classList.add('active-radio');
+    });
+});
