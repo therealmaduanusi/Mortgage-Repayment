@@ -34,11 +34,11 @@
         </div>
 
         <form action="">
-          <label for="Mortgage-amount">
+          <label for="mortgage-amount">
             Mortgage Amount
             <div class="mortage-amount mortage">
               <span class="">£</span>
-              <input type="text" name="Mortgage-amount" id="Mortgage-amount" />
+              <input type="text" name="Mortgage-amount" id="mortgage-amount" />
             </div>
           </label>
 
@@ -61,11 +61,11 @@
 
           <p>Mortgage Type</p>
           <label for="Mortgage-payment" class="label-radio">
-            <input type="radio" name="Mortgage-type" id="Mortgage-payment" />
+            <input type="radio" name="Mortgage-type" id="Mortgage-payment" required/>
             <span>Repayment</span>
           </label>
           <label for="Interest-only" class="label-radio">
-            <input type="radio" name="Mortgage-type" id="Interest-only" />
+            <input type="radio" name="Mortgage-type" id="Interest-only" required/>
             <span>Interest Only</span>
           </label>
 
@@ -82,30 +82,21 @@
           src="/assets/images/illustration-empty.svg"
           alt="illustration empty"
         />
-        <h3>Results shown here</h3>
+        <h3 class="no-result-h3">Results shown here</h3>
 
-        <p>
+        <p class="no-result-p">
           Complete the form and click “calculate repayments” to see what your
           monthly repayments would be.
         </p>
+
       </div>
     </main>
 
-    
     <!-- Empty results start -->
 
     <!-- Empty results end -->
 
     <!-- Completed results start -->
-
-    <!-- Your results
-
-  Your results are shown below based on the information you provided. 
-  To adjust the results, edit the form and click “calculate repayments” again.
-
-  Your monthly repayments
-
-  Total you'll repay over the term -->
 
     <!-- Completed results end -->
 

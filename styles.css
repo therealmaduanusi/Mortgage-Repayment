@@ -3,6 +3,7 @@
   --cal-bg-color: hsl(0, 0%, 100%);
   --res-bg-color: hsl(202, 55%, 16%);
   --res-text-color: hsl(200, 24%, 40%);
+  --res-bgColor: hsl(200, 26%, 54%);
   --btn-color: hsl(61, 70%, 52%);
   --btn-hover: hsl(4, 69%, 50%);
   --border-color: hsl(203, 41%, 72%);
@@ -57,7 +58,7 @@ label[for="Mortgage-amount"] > div:hover {
   }
   main .result {
     padding: 1rem;
-    text-align: center;
+    /* text-align: center; */
     width: 50%;
     background-color: var(--res-bg-color);
     color: var(--bg-color);
@@ -108,12 +109,12 @@ label {
 }
 
 /* Mortage Amount */
-label[for="Mortgage-amount"] {
+label[for="mortgage-amount"] {
   color: var(--res-text-color);
   width: 100%;
   position: relative;
 }
-label[for="Mortgage-amount"] > div {
+label[for="mortgage-amount"] > div {
   margin-top: 0.3rem;
   margin-bottom: 1rem;
   width: 100%;
@@ -121,12 +122,12 @@ label[for="Mortgage-amount"] > div {
   display: flex;
   border-radius: 2px;
 }
-label[for="Mortgage-amount"] input {
+label[for="mortgage-amount"] input {
   width: 100%;
   border: none;
   padding: 0 0.2rem;
 }
-label[for="Mortgage-amount"] span {
+label[for="mortgage-amount"] span {
   background-color: var(--bg-color);
   padding: 0.2rem 0.7rem;
   border-top-left-radius: 2%;
@@ -142,19 +143,18 @@ label[for="Mortgage-rate"] {
 label[for="Mortgage-term"] > div,
 label[for="Mortgage-rate"] > div {
   margin-top: 0.3rem;
-  margin-bottom: 1rem;
   width: 100%;
   border: 1px solid var(--border-color);
   display: flex;
   border-radius: 2px;
 }
 /* active */
-label[for="Mortgage-amount"] > div.active,
+label[for="mortgage-amount"] > div.active,
 label[for="Mortgage-term"] > div.active,
 label[for="Mortgage-rate"] > div.active {
   border: 1px solid var(--btn-color);
 }
-label[for="Mortgage-amount"] > div.active span,
+label[for="mortgage-amount"] > div.active span,
 label[for="Mortgage-term"] > div.active span,
 label[for="Mortgage-rate"] > div.active span {
   background-color: var(--btn-color);
@@ -253,14 +253,11 @@ form > button {
 form > button:hover {
   background-color: hsla(61, 70%, 52%, 0.596);
 }
-@media (max-width: 550px) {
-  form > button {
-    margin: 1rem auto auto auto;
-  }
-  main .result {
-    padding: 2rem 0.5rem;
-  }
-}
+
+
+
+
+
 
 main .result {
   background-color: var(--res-bg-color);
@@ -268,16 +265,92 @@ main .result {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
 }
 main .result > img {
   max-width: 50%;
   margin: 0 auto;
 }
-main .result > h3 {
+main .result > .no-result-h3 {
   margin: 0.8rem 0;
+  text-align: center;
 }
-main .result > p {
+main .result > .no-result-p {
   color: var(--res-text-color);
   font-size: 0.7rem;
+  text-align: center;
+}
+
+/* result styles */
+main .result > .result-h3 {
+  margin: 0.8rem 0;
+}
+main .result > .result-p {
+  color: var(--res-text-color);
+  font-size: 0.7rem;
+}
+.total-result {
+  background-color: hsl(200, 55%, 10%);
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-top: 2px solid var(--btn-color);
+}
+.total-result > .monthly {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--res-bgColor);
+}
+.total-result > .monthly h3 {
+  margin: 0.5rem 0;
+  color: var(--btn-color);
+  font-size: 2.5rem;
+}
+.total-result > .total {
+  margin-top: 1rem;
+}
+.total-result > .total h3 {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+}
+
+
+@media (max-width: 550px) {
+  form > button {
+    margin: 2rem auto auto auto;
+  }
+  main .result {
+    margin-top: 1rem;
+    padding: 2.5rem 0.5rem;
+  }
+  main .calculator > div {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  /* Radio */
+  label[for="Mortgage-payment"],
+  label[for="Interest-only"] {
+    padding: 0.7rem 0.5rem;
+  }
+
+
+  label[for="Mortgage-term"],
+  label[for="Mortgage-rate"] {
+    margin-top: 1rem;
+  }
+  label[for="Mortgage-term"] input, 
+  label[for="Mortgage-rate"] input {
+    padding: 0.7rem 0.3rem;
+  }
+  label[for="Mortgage-term"] span, 
+  label[for="Mortgage-rate"] span {
+    padding: 0.5rem 0.9rem;
+  }
+
+  label[for="mortgage-amount"] input {
+    padding: 0.7rem 0.2rem;
+  }
+  label[for="mortgage-amount"] span {
+    padding: 0.5rem 0.9rem;
+  }
+
 }
