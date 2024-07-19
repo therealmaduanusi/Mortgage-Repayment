@@ -215,7 +215,7 @@ input[type="radio"]::after {
   border-radius: 50%;
   border: 1px solid hsl(61, 70%, 52%);
   position: relative;
-  /* top: -1px; */
+  top: -1px;
 }
 input[type="radio"]::before {
   content: "";
@@ -352,4 +352,17 @@ main .result > .result-p {
     padding: 0.5rem 0.9rem;
   }
 
+  input[type="radio"]::after {
+    width: 0.85rem;
+    height: 0.85rem;
+    border: 1px solid hsl(61, 70%, 52%);
+    position: relative;
+    top: -1px;
+  }
+  input[type="radio"]::before {
+    width: 8px;
+    height: 8px;
+    top: 2.5px;
+    left: 3.4px;
+  }
 }
