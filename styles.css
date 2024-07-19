@@ -357,13 +357,12 @@ main .result > .result-p {
     height: 0.85rem;
     border: 1px solid hsl(61, 70%, 52%);
     position: relative;
-    top: 0.5px;
     left: -0.5px;
   }
   input[type="radio"]::before {
     width: 8px;
     height: 8px;
-    top: 2.5px;
-    left: 3.4px;
+    top: 3px;
+    left: 3.3px;
   }
 }
