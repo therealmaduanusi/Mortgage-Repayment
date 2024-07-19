@@ -210,11 +210,12 @@ input[type="radio"]::after {
   content: "";
   background-color: #fff;
   display: none;
-  width: 0.7rem;
-  height: 0.7rem;
+  width: 0.8rem;
+  height: 0.8rem;
   border-radius: 50%;
   border: 1px solid hsl(61, 70%, 52%);
   position: relative;
+  top: -1px;
 }
 input[type="radio"]::before {
   content: "";
@@ -226,7 +227,7 @@ input[type="radio"]::before {
   position: absolute;
   z-index: 1;
   top: 2.5px;
-  left: 2.5px;
+  left: 3.4px;
 }
 /* active radio */
 input[type="radio"]:checked::after {
