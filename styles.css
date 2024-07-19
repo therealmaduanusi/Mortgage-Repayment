@@ -214,7 +214,6 @@ input[type="radio"]::after {
   height: 0.8rem;
   border-radius: 50%;
   bottom: 1px;
-  left: -1px;
   border: 1px solid hsl(61, 70%, 52%);
   position: relative;
 }
@@ -227,12 +226,12 @@ input[type="radio"]::before {
   border-radius: 50%;
   position: absolute;
   z-index: 1;
-  top: 2px;
-  left: 2.5px;
+  top: 2.5px;
+  left: 3.6px;
 }
 /* active radio */
 input[type="radio"]:checked::after {
-  display: inline-block;
+  display: block;
 }
 input[type="radio"]:checked::before {
   display: inline-block;
