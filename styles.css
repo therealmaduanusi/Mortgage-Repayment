@@ -322,7 +322,7 @@ div.border-error {
 .required-field {
   color: var(--error);
   font-size: 0.7rem;
-  /* display: none; */
+  display: none;
 }
 
 @media (max-width: 560px) {
