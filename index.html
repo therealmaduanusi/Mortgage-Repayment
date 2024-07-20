@@ -37,25 +37,28 @@
           <label for="mortgage-amount">
             Mortgage Amount
             <div class="mortage-amount mortage">
-              <span class="">£</span>
+              <span class="mortgage-amount-span">£</span>
               <input type="text" name="Mortgage-amount" id="mortgage-amount" />
             </div>
+            <span class="required-field">This field is required</span>
           </label>
 
           <div>
             <label for="Mortgage-term">
               Mortgage Term
-              <div class="mortage-yr-rate mortage">
+              <div class="mortage-term-rate mortage">
                 <input type="text" name="Mortgage-term" id="Mortgage-term" />
-                <span class="">years</span>
+                <span class="mortage-term-rate-span">years</span>
               </div>
+              <span class="required-field">This field is required</span>
             </label>
             <label for="Mortgage-rate">
               Interest Rate
               <div class="mortage-yr-rate mortage">
                 <input type="text" name="Mortgage-rate" id="Mortgage-rate" />
-                <span class="">%</span>
+                <span class="mortage-yr-rate-span">%</span>
               </div>
+              <span class="required-field">This field is required</span>
             </label>
           </div>
 
@@ -68,6 +71,8 @@
             <input type="radio" name="Mortgage-type" id="Interest-only" required/>
             <span>Interest Only</span>
           </label>
+          <span class="required-field">This field is required</span>
+
 
           <button type="submit">
             <img

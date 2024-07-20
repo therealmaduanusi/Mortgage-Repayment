@@ -12,7 +12,7 @@ mortgageActiveState.forEach((mortgageActive) => {
     }
 
     // Add the active class to the current/clicked button
-    mortgageActive.className = " active";
+    mortgageActive.className = "mortage-amount mortage active";
   });
 });
 
@@ -33,7 +33,7 @@ const mortageTerm = document.getElementById("Mortgage-term");
 const mortageRate = document.getElementById("Mortgage-rate");
 submit.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log(radioButtons[0].classList.contains("active-radio"));
+//   console.log(radioButtons[0].classList.contains("active-radio"));
   let mortageAmountValue = Number(mortageAmount.value.trim());
   let mortageTermValue = Number(mortageTerm.value.trim());
   let mortageRateValue = Number(mortageRate.value.trim());
@@ -61,6 +61,30 @@ submit.addEventListener("click", (e) => {
             </div>
         `;
   } else {
-    alert("please input a value");
+    let mortages = document.querySelectorAll('.mortage')
+    if (mortageAmount.value.trim()) {
+        mortageAmount.parentElement.classList.remove('border-error')
+        mortageAmount.previousElementSibling.classList.remove('span-error')
+    } else {
+        mortageAmount.parentElement.classList.add('border-error')
+        mortageAmount.previousElementSibling.classList.add('span-error')
+    }
+
+    if (mortageTerm.value.trim()) {
+        mortageTerm.parentElement.classList.remove('border-error');
+        mortageTerm.nextElementSibling.classList.remove('span-error')
+    } else {
+        mortageTerm.parentElement.classList.add('border-error');
+        mortageTerm.nextElementSibling.classList.add('span-error')
+    }
+
+    if (mortageRate.value.trim()) {
+        mortageRate.parentElement.classList.remove('border-error');
+        mortageRate.nextElementSibling.classList.remove('span-error')
+    } else {
+        mortageRate.parentElement.classList.add('border-error');
+        mortageRate.nextElementSibling.classList.add('span-error')
+    }
+    // alert("please input a value");
   }
 });

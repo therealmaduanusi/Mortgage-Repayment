@@ -5,7 +5,7 @@
   --res-text-color: hsl(200, 24%, 40%);
   --res-bgColor: hsl(200, 26%, 54%);
   --btn-color: hsl(61, 70%, 52%);
-  --btn-hover: hsl(4, 69%, 50%);
+  --error: hsl(4, 69%, 50%);
   --border-color: hsl(203, 41%, 72%);
 }
 * {
@@ -37,7 +37,7 @@ label[for="Mortgage-amount"] > div:hover {
   cursor: pointer;
 }
 
-@media (min-width: 530px) {
+@media (min-width: 560px) {
   body {
     font-family: "Plus Jakarta Sans", sans-serif;
     display: flex;
@@ -113,10 +113,10 @@ label[for="mortgage-amount"] {
   color: var(--res-text-color);
   width: 100%;
   position: relative;
-}
-label[for="mortgage-amount"] > div {
-  margin-top: 0.3rem;
   margin-bottom: 1rem;
+}
+.mortage-amount {
+  margin-top: 0.3rem;
   width: 100%;
   border: 1px solid var(--border-color);
   display: flex;
@@ -127,7 +127,7 @@ label[for="mortgage-amount"] input {
   border: none;
   padding: 0 0.2rem;
 }
-label[for="mortgage-amount"] span {
+.mortgage-amount-span {
   background-color: var(--bg-color);
   padding: 0.2rem 0.7rem;
   border-top-left-radius: 2%;
@@ -140,8 +140,8 @@ label[for="Mortgage-rate"] {
   color: var(--res-text-color);
   width: 100%;
 }
-label[for="Mortgage-term"] > div,
-label[for="Mortgage-rate"] > div {
+.mortage-term-rate,
+.mortage-yr-rate {
   margin-top: 0.3rem;
   width: 100%;
   border: 1px solid var(--border-color);
@@ -167,8 +167,8 @@ label[for="Mortgage-rate"] input {
   padding: 0.3rem 0.3rem;
   border: none;
 }
-label[for="Mortgage-term"] span,
-label[for="Mortgage-rate"] span {
+.mortage-term-rate-span,
+.mortage-yr-rate-span {
   background-color: var(--bg-color);
   padding: 0.2rem 0.5rem;
   font-size: 15px;
@@ -177,8 +177,8 @@ label[for="Mortgage-rate"] span {
 
 /* Mortgage Type */
 form > p {
+  margin-top: 1rem;
   color: var(--res-text-color);
-  margin: 1rem 0 0 0;
 }
 
 label[for="Mortgage-payment"],
@@ -311,8 +311,21 @@ main .result > .result-p {
   font-size: 1.5rem;
 }
 
+/* error class */
+div.border-error {
+  border: 1px solid var(--error);
+}
+.span-error {
+  background-color: var(--error);
+  color: #fff;
+}
+.required-field {
+  color: var(--error);
+  font-size: 0.7rem;
+  /* display: none; */
+}
 
-@media (max-width: 550px) {
+@media (max-width: 560px) {
   form > button {
     margin: 2rem auto auto auto;
   }
@@ -340,15 +353,15 @@ main .result > .result-p {
   label[for="Mortgage-rate"] input {
     padding: 0.7rem 0.3rem;
   }
-  label[for="Mortgage-term"] span, 
-  label[for="Mortgage-rate"] span {
+  .mortage-yr-rate-span, 
+  .mortage-term-rate-span {
     padding: 0.5rem 0.9rem;
   }
 
   label[for="mortgage-amount"] input {
     padding: 0.7rem 0.2rem;
   }
-  label[for="mortgage-amount"] span {
+  .mortgage-amount-span {
     padding: 0.5rem 0.9rem;
   }
 
