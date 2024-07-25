@@ -46,7 +46,7 @@ submit.addEventListener("click", (e) => {
     mortageTermValue
   ) {
     const monthlyInterestRate = mortageRateValue / 12 / 100;
-    const numberOfPayments = years * 12;
+    const numberOfPayments = mortageTermValue * 12;
 
     const numerator =
       monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments);
